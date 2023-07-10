@@ -7,13 +7,13 @@ from PIL import Image
 
 @st.cache_resource()
 def load_model():
-	model = tf.keras.models.load_model('saved_model/final299')
+	model = tf.keras.models.load_model('saved_model/final')
 	return model
 
 @st.cache_resource()
 def load_class_names():
     class_names = []
-    with open('saved_model/flowers299_labels.pickle', "rb") as f:
+    with open('saved_model/flowers_final_labels.pickle', "rb") as f:
         class_names = pickle.loads(f.read())
     return class_names
 
