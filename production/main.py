@@ -22,31 +22,31 @@ The follow actions are supported:
 IMAGES_DIR = "../images/Flowers5/"
 
 
-def train(epochs=10, load_checkpoint=False):
-    train_ds, val_ds = OpenDataset(IMAGES_DIR)
+def train(epochs=10, load_checkpoint=False, images_dir=IMAGES_DIR):
+    train_ds, val_ds = OpenDataset(images_dir)
     model = Model(len(train_ds.class_names), load_checkpoint=load_checkpoint)
     Fit(model, train_ds, val_ds, epochs=epochs)
 
-def eval():
-    train_ds, val_ds = OpenDataset(IMAGES_DIR)
+def eval(images_dir=IMAGES_DIR):
+    train_ds, val_ds = OpenDataset(images_dir)
     model = Model(len(train_ds.class_names), load_checkpoint=True)
     score = f1_score(model, val_ds)
     print("F1 score was: ", score)
 
-def save_model(dest):
-    train_ds, val_ds = OpenDataset(IMAGES_DIR)
+def save_model(dest, images_dir=IMAGES_DIR):
+    train_ds, val_ds = OpenDataset(images_dir)
     model = Model(len(train_ds.class_names), load_checkpoint=True)
     model.save(dest)
 
 def main(args):
     match args.action:
         case "train":
-            train(epochs=args.e, load_checkpoint=args.c)
+            train(epochs=args.e, load_checkpoint=args.c, images_dir=args.src)
         case "eval":
-            eval()
+            eval(images_dir=args.src)
         case "save":
             dest = args.d
-            save_model(dest)
+            save_model(dest, images_dir=args.src)
         case _:
             print("'"+ args.action + "' is not a supported action.")
 
@@ -65,6 +65,8 @@ if __name__ == '__main__':
                         help='number of epochs to run',
     )
     parser.add_argument("-d", "-dest", help="the destination to save the stored model.")
+    parser.add_argument("-src", default="../images/Flowers/",
+                        help="the relative destination of the training data")
     
     args = parser.parse_args()
 
