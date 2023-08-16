@@ -12,11 +12,19 @@ See the README for how to train the model.
 
 ## Research steps
 
+1. [Project Ideas](https://docs.google.com/document/d/1OwoVThBr-NEvzDFm6YNk9EviZhY2S7FuJz6icmsn5NU/edit?usp=sharing)
+1. [Testing AWS](https://docs.google.com/document/d/1C1HcN_NeIyYbGJT9znWVsDQfOVE8tayJ222FErkRPOQ/edit#heading=h.ntgqoiq6rz4a)
 1. [Project Proposal](Project%20Proposal.pdf)
 1. [Data collection](Step1-Reading-Data.ipynb)
 1. [Exploratory Data Analysis](Step2-EDA.ipynb)
 1. [Reproduce research](Step3-Reproduce-Research.ipynb)
-1. [Picking base model](Step7-Picking-Base-Model.ipynb)
+1. [Experiment with various models](Step7-Picking-Base-Model.ipynb)
 1. [Prototyping](Step8-Prototype.ipynb)
 1. [Scaling up](Step9-Scale-Up.ipynb)
 1. [Study advanced units](Step10-Study-Advanced-Units.ipynb)
+1. [Pick deployment method](https://docs.google.com/document/d/1wbKFaBcFDp6WvjLrykD911FqIPU1Ze3CqbnJgVaP0_E/edit#heading=h.sdgrs03vb91x)
+1. [Design deployment architecture](https://docs.google.com/document/d/1sr8bqBBqgjXQrLTXV3ZCatJyUzaGcyN55LnAQDyXClE/edit#heading=h.encavr6phqug)
+
+## Final Product
+
+My app is deployed using StreamLit. To access it please visit this [url](https://ucsd-ml-capstone-97iasbglz7.streamlit.app/)
