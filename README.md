@@ -36,7 +36,7 @@ See the README for how to train the model.
 
 * Accurately classifying many flower types is a hard problem. Scaling from 15 to 30 flower types more than doubles the training time and required making the model more complicated. I ended up using checkpointing to work around this problem.
 
-* Transfer learning is very helpful. In particular I found the BiT models to be very useful in speeding up the training of my model.
+* Transfer learning is very helpful. In particular I found the [BiT](https://blog.tensorflow.org/2020/05/bigtransfer-bit-state-of-art-transfer-learning-computer-vision.html) models to be very useful in speeding up the training of my model.
 
 ## Final Product
 
