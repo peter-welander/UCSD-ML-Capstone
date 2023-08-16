@@ -4,6 +4,10 @@
 
 For my capstone I built a flower classifier that can identify ~300 types of flowers. 
 
+## Dataset
+
+I used the following dataset: https://www.kaggle.com/datasets/bogdancretu/flower299
+
 ## Code layout
 
 * The code for training the model is in the [production](production) directory. \
@@ -24,6 +28,15 @@ See the README for how to train the model.
 1. [Study advanced units](Step10-Study-Advanced-Units.ipynb)
 1. [Pick deployment method](https://docs.google.com/document/d/1wbKFaBcFDp6WvjLrykD911FqIPU1Ze3CqbnJgVaP0_E/edit#heading=h.sdgrs03vb91x)
 1. [Design deployment architecture](https://docs.google.com/document/d/1sr8bqBBqgjXQrLTXV3ZCatJyUzaGcyN55LnAQDyXClE/edit#heading=h.encavr6phqug)
+
+## Learnings
+
+
+* Exploratory data analysis is important. When scaling up and looking at my confusion matrix I realized that some flowers were labelled both with their scientific name and their common name. This made it impossible for the model to classify them correctly. Well, the model might label a flower correctly with its scientific name, but the validation data might have its common name... Had to go and fix my data to improve the model.
+
+* Accurately classifying many flower types is a hard problem. Scaling from 15 to 30 flower types more than doubles the training time and required making the model more complicated. I ended up using checkpointing to work around this problem.
+
+* Transfer learning is very helpful. In particular I found the BiT models to improve the learning of my model.
 
 ## Final Product
 
