@@ -12,7 +12,7 @@ See the README for how to train the model.
 
 ## Research steps
 
-1. [Project Proposal](Project Proposal.pdf)
+1. [Project Proposal](Project%20Proposal.pdf)
 1. [Data collection](Step1-Reading-Data.ipynb)
 1. [Exploratory Data Analysis](Step2-EDA.ipynb)
 1. [Reproduce research](Step3-Reproduce-Research.ipynb)
